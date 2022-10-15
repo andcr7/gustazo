@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<style>
+body {
+    background-color:rgb(0, 0, 0);
+}
+</style>
+    <header>
+        <div class="container">
+            <nav class="nav">
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-times"></i>
+                </div>
+                <a href="#" class="logo">LOGO</a>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./menu.html" class="nav-link">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">Reservaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./comidas.html" class="nav-link">Comidas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./contacto.html" class="nav-link">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="dis-sto">
+        
+        <form action="../registrar.php">
+            
+            <br><label for="txtidentificacion"><h1><p style="color:white">Identificacion</p></h1></label>
+            <input type="txtidentificacion" name="txtidentificacion" id="txtidentificacion"><br>
+            
+            <br><label for="txtnombres"><h1><p style="color:white">Nombres</p></h1></label> 
+            <input type="txtnombres" name="txtnombres" id="txtnombres"><br>
+
+            <br><label for="txtapellidos"><h1><p style="color:white">Apellido</p></h1></label>
+            <input type="txtapellidos" name="txtapellidos" id="txtapellidos"><br>
+
+            <br><label for="txtTelefono"><h1><p style="color:white">Telefono</p></h1></label>
+            <input type="txtDireccion" name="txtDireccion" id="txtDireccion"><br>
+
+            <br><label for="txtFecha"><h1><p style="color:white">Fecha de nacimiento</p></h1></label>
+            <input type="txtFecha" name="txtFecha" id="txtFecha"><br>
+
+            <br><label for="txtHora"><h1><p style="color:white">Hora</p></h1></label>
+            <input type="txtHora" name="txtHora" id="txtHora"><br>
+
+            <br><label for="txtMotivo"><h1><p style="color:white">Motivo</p></h1></label>
+            <input type="txtMotivo" name="txtMotivo" id="txtMotivo"><br>
+
+            <br><label for="txtcorreo"><h1><p style="color:white">Correo</p></h1></label>
+            <input type="txtcorreo" name="txtcorreo" id="txtcorreo"><br>
+
+            <br><label for="txtcontraseña"><h1><p style="color:white">Contraseña</p></h1></label>
+            <input type="txtcontraseña" name="txtcontraseña" id="txtcontraseña"><br>
+
+            <br><button type="submit" class="btn cta-btn"><h1>Reservar</h1></button><br>            
+        </form>
+        
+    </section>
+
+</body>
+
+</html>
