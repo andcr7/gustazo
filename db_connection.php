@@ -1,14 +1,15 @@
 <?php
-$conexion = null;
+$connection;
 $servidor = 'localhost'; //servidor local
 $bd = 'gustazo'; //base de datos
 $user = 'root'; // Usuario de MySQL
 $pass = ''; // Contraseña de MySQL
-try{
-    $conexion = new POD ('mysql:host='.$servidor.';dbname='.$bd, $user, $pass);
-}catch (PDOException $e){
-    echo "Error de conexion!";
-    exit;
+
+$connection = mysqli_connect($servidor, $user, $pass, $bd);
+if (!$connection) {
+    echo "Error: No se pudo conectar a MySQL." . PHP_EOL;
+    echo "errno de depuración: " . mysqli_connect_errno() . PHP_EOL;
+    echo "error de depuración: " . mysqli_connect_error() . PHP_EOL;
+    return;
 }
-return $conexion;
-?>
+return $connection;
