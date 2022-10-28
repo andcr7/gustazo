@@ -1,9 +1,10 @@
 <?php
 include './db_connection.php';
-$Correo = $_POST['Correo'];
-$contrasena = $_POST['contrasena'];
+$email = $_POST['email'] ?? '';
+$password = $_POST['password'] ?? '';
+$password = hash('sha512', $password);
 
-$validar_login = mysqli_query($conexion, "SELECT * FROM registros WHERE Correo='$Correo' AND contrasena='$contrasena'");
+$validar_login = mysqli_query($connection, "SELECT * FROM registros WHERE correo='$email' AND contrasena='$password'");
 if (mysqli_num_rows($validar_login) > 0){
      header("location: ./index.php");
      exit;
@@ -11,7 +12,7 @@ if (mysqli_num_rows($validar_login) > 0){
    echo '
         <script>
              alert ("Usuario no existe, por favor verifique los datos introducidos");
-             "window.location = ./login.php";
+             window.location.href = "/gustazo/html/reservaciones.html";
         </script>
    ';
    exit;

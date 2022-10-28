@@ -26,8 +26,8 @@
                     <!--Login-->
                     <form action="../valida_login.php" method="POST" class="formulario__login">
                         <h2>Iniciar sesion</h2>
-                        <input type="text" placeholder="Correo Electronico" name="correo">
-                         <input type="password" placeholder="Contraseña" name="contraseña">
+                        <input type="email" placeholder="Correo Electrónico" name="email">
+                         <input type="password" placeholder="Contraseña" name="password">
                         <button>Entrar</button>
                     </form>
 
