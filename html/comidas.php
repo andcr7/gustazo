@@ -1,3 +1,7 @@
+<?php
+include '../listado_productos.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,6 +12,9 @@
     <title>Restaurante</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/comidas.css">
 </head>
 
 <body>
@@ -49,6 +56,34 @@
                 <h1 class="head">El Gustazo</h1>
             </div>
         </div>
+    </section>
+
+    <section>
+        <table class="content-table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Cantidad</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <?php
+                    foreach ($productos as $producto) {
+                        echo '
+                        <tr>
+                            <td>' . $producto["id"] . '</td>
+                            <td>' . $producto["nombre"] . '</td>
+                            <td>' . $producto["cantidad"] . '</td>
+                            <td>' . $producto["valor"] . '</td>
+                        </tr>';
+                    }
+                    ?>
+                </tr>
+            </tbody>
+        </table>
     </section>
 
     <section>
